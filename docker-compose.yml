@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  rethinkdb:
+    image: rethinkdb
+    container_name: rethink-v1
+    volumes:
+      - ./data:/data
+    ports:
+      - "8080:8080"
+      - "29015:29015"
+      - "28015:28015"
+    restart: always
